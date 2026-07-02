@@ -29,3 +29,10 @@ REQUEST_DELAY_SEC = 0.05    # between raw.githubusercontent.com downloads
 
 # --- RAG query ---
 DEFAULT_TOP_K = 15
+
+# --- Agents ---
+# LLM used by the Planner Agent for reasoning and plan generation.
+# Switch to a larger model (llama3.1:8b, mistral:7b) for better plan quality.
+PLANNER_MODEL = os.environ.get("PLANNER_MODEL", "llama3.2:3b")
+PLANNER_TEMPERATURE = 0.1
+PLANNER_MAX_TOKENS = 2000
